@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.embedded-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px gray solid;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    min-width: 265px;
+    width: 40vw;
+    padding: 3px 0.1rem;
+    & label{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 0 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex: 5;
+        color: white;
+    }
+    & input {
+        padding: 1px;
+        border: 1px solid;
+        border-radius: 0 0.5rem 0.5rem 0;
+        height: 100%;
+        flex: 9;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        &:focus{
+            border: 0px;
+        }
+    }
+    & select{
+        padding: 1px;
+        background-color: transparent;
+        border: 2px gray solid;
+        border-radius: 0.5rem ;
+        height: 100%;
+        flex: 7;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        background-color: rgba(80, 75, 168, 0.604);
+        & option {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        & option:hover{
+            background-color: rgba(80, 75, 168, 0.926);
+        }
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    & button {
+        padding: 1rem;
+        border-radius: 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        &:hover{
+            background-color: rgb(186, 186, 186);
+        }
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.transparent-input{
+    background-color: transparent !important;
+    min-height: 2.5rem;
+    color: rgb(255, 255, 255) !important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 5px;
+    border: 2px gray solid;
+    border-radius: 0.5rem;
+    font-size: larger;
+    &:-webkit-autofill{
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #ffffff;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+.navigations{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(24, 29, 165, 0.863);
+    display: flex;
+    justify-content:center;
+    &:hover{
+        cursor: pointer;
+        /* border-bottom: 1px rgb(22, 25, 123) solid; */
+        color: rgba(25, 28, 122, 0.863);
+        font-weight: 500;
+    }
+}
+
+@media (max-width:600px) {
+    .embedded-input{
+        width: 70vw;
+        & select {
+            flex: auto;
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .embedded-input{
+        width: 60vw;
+    }
 }
