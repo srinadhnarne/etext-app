@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    box-shadow:none;
+    padding: 0;
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+.light{
+    background-color: rgb(241, 241, 241);
+    color: black;
+}
+
+.dark{
+    background-color: rgb(8, 43, 93);
+    color: white;
+}
+
+.logo-bg{
+    background-color: rgba(77, 94, 247, 0.562);
+    border-radius: 12px;
+}
+
+.theme1{
+    background-color: rgb(33, 122, 255);
+    border-radius: 12px;
+}
+
+.theme2{
+    background-color: rgb(213, 51, 245);
+    border-radius: 12px;
+}
+
+@media (max-width: 800px) {
+    .logo-bg{
+        background-color: transparent;
+        border-radius: 12px;
+    }
+}
